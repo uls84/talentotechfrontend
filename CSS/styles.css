@@ -64,21 +64,18 @@ body {
   font-style: normal;
 }
 
-/* SLIDESHOW */
+/* SLIDESHOW INDEX*/
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -94,18 +91,15 @@ body {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -116,7 +110,6 @@ body {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -125,7 +118,6 @@ body {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -141,7 +133,6 @@ body {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -151,6 +142,59 @@ body {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* NOSOTROS */
+
+.nosotros {
+    display: flex;
+    justify-content: center;
+    padding: 45px 20px;
+    background-color: #5e5e5e;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2, h3 {
+  color: #e4e4e4;; 
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.nosotros p {
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: space-evenly; /* Centra los logos */
+  align-items: center; /* Alinea verticalmente los logos */
+  margin-top: 30px; /* Espacio superior */
+}
+
+.brand-logos img {
+  width: 200px;
+  height: 200px;
+  margin: 0 15px; /* Espaciado entre logos */
+  opacity: 0.8; /* Opcional: un poco de transparencia */
+  transition: opacity 0.3s; /* Efecto de transición al pasar el cursor */
+}
+
+.brand-logos img:hover {
+  opacity: 1; 
+}
+
 
 /* RESEÑAS*/
 
