@@ -8,8 +8,14 @@ header {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #000000;
   color: #e6d205;
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
 }
 
 .Logo {
@@ -398,6 +404,10 @@ footer {
   
   .text_footer {
     font-size: 11px;
+  }
+
+  header {
+    
   }
   
 }
