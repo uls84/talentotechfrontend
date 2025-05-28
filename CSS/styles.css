@@ -159,7 +159,8 @@ body {
   padding: 25px 20px;
   background-color: #5e5e5e;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
+  border-radius: 8px;
   text-align: center;
 }
 
@@ -196,11 +197,8 @@ h3 {
   width: 200px;
   height: 200px;
   margin: 0 15px;
-  /* Espaciado entre logos */
   opacity: 0.8;
-  /* Opcional: un poco de transparencia */
   transition: opacity 0.3s;
-  /* Efecto de transición al pasar el cursor */
 }
 
 .brand-logos img:hover {
@@ -341,14 +339,11 @@ h3 {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  /* Espacio entre grupos de formulario */
 }
 
 label {
   margin-bottom: 5px;
-  /* Espaciado entre el label y el input */
   color: #333;
-  /* Color del label */
 }
 
 
@@ -372,20 +367,14 @@ button {
   justify-content: center;
   padding: 10px 15px;
   background-color: #007bff;
-  /* Color de fondo del botón */
   border: none;
-  /* Sin borde */
   border-radius: 4px;
-  /* Bordes redondeados */
   cursor: pointer;
-  /* Cambia a puntero al pasar el cursor */
   transition: background-color 0.3s;
-  /* Transición para el cambio de color */
 }
 
 button:hover {
   background-color: #0056b3;
-  /* Color oscuro al pasar el cursor */
 }
 
 
@@ -422,6 +411,63 @@ footer {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .text_footer {
+    font-size: 11px;
+  }
+
+  li.nav-item {
+    text-align: center;
+  }
+
+  .formulario form {
+    width: 340px;
+  }
+
+  .formulario p {
+    min-width: 340px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 12px;
+  }
+
+  p {
+    padding: 8px 60px;
+    font-size: 18px !important;
+  }
+
+  .col {
+    padding: 20px 10px;
+  }
+
+  .textContainer {
+    padding-top: 30px;
+  }
+
+  .textContainer div p {
+    padding: 10px 24px !important;
+    font-size: 18px !important;
+    margin: 0px 5%;
+  }
+
+  div .card-body p {
+    padding: 2px 2px;
+    font-size: 18px !important;
+  }
+
+  h3 {
+    padding: 0px 24px;
+  }
+
+  iframe {
+    height: 500px;
+    padding: 0px 5%;
+    margin: 10% 0px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -432,4 +478,56 @@ footer {
   .container {
     grid-template-columns: 1fr;
   }
+
+  .texto_footer {
+    font-size: 9px;
+  }
+
+  li.nav-item {
+    text-align: center;
+  }
+
+  .formulario form {
+    width: 340px;
+  }
+
+  .formulario p {
+    min-width: 340px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  div .card-body p {
+    padding: 2px 2px;
+    font-size: 18px !important;
+  }
+
+  .textContainer {
+    padding-top: 40px;
+  }
+
+  .textContainer p {
+    padding: 10px 24px !important;
+    font-size: 18px !important;
+    margin: 0px 5%;
+  }
+
+  .col {
+    padding: 24px 10px;
+  }
+
+  h3 {
+    padding: 0px 24px;
+  }
+
+  iframe {
+    height: 450px;
+    padding: 0px 5%;
+    margin: 10% 0px;
+  }
+
 }
