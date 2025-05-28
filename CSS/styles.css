@@ -160,7 +160,7 @@ body {
   padding: 25px 20px;
   background-color: #5e5e5e;
   max-width: 800px;
-  margin: 25px auto;
+  margin: 150px auto;
   border-radius: 8px;
   text-align: center;
 }
@@ -384,7 +384,7 @@ footer {
   justify-content: center;
   align-items: stretch;
   background-color: #e6d205;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   z-index: 100;
   width: 100%;
@@ -395,6 +395,83 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
   header {
+    padding: 20px 0px;
+  }
+  .product-card {
+    width: calc(50% - 20px);
+  }
+  
+  
+  .text_footer {
+    font-size: 11px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+  
+  .nav ul {
+    margin: 4px;
+  }
+
+  .titulo {
+    display: none;
+  }
+
+  /* Reseñas */
+
+  .reseñas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Contacto */
+
+
+  .Logo img {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+  }
+
+
+  .container_contacto {
+    height: 555px;
+    /*margin-top: 110px;
+    margin: 20px;*/
+    padding: 10px 46px;
+    font-size: 14px;
+  }
+
+  /* Nosotros */
+
+  
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 90%;
+  }
+  
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .texto_footer {
+    font-size: 9px;
+  }
+
+    header {
     padding: 20px 0px;
   }
   .product-card {
@@ -438,39 +515,11 @@ footer {
 
 
   .container_contacto {
-    margin: 20px;
-    padding: 20px 30px;
+    height: 670px;
+    /*margin-top: 110px;
+    margin: 20px;*/
+    padding: 16px 28px;
     font-size: 14px;
   }
-
-  /* Nosotros */
-
-  
-
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-card {
-    width: 90%;
-  }
-  
-  .container {
-    grid-template-columns: 1fr;
-  }
-  
-  .texto_footer {
-    font-size: 9px;
-  }
-
 
 }
