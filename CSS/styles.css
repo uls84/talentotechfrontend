@@ -217,15 +217,10 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.fila {
-
-}
-
 .card {
-  flex: 0 1 calc(33.33% - 45px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 12px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   background-color: #5e5e5e;
   text-align: center;
