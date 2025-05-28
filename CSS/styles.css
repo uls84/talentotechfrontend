@@ -211,7 +211,7 @@ h3 {
 
 .reseñas {
   display: grid;
-  margin: 10px;
+  margin: 15px 15px 45px 15px;
   font-style: italic;
   margin-top: 112px;
   grid-template-columns: repeat(3, 1fr);
@@ -298,8 +298,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 112px;
   padding: 10px;
+  margin: 112px 15px 45px 15px;
 }
 
 .product-card {
