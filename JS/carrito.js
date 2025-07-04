@@ -41,7 +41,7 @@ function cargarCarrito() {
     let totalCompra = document.getElementById('totalCompra');
     totalCompra.innerHTML = '';
 
-    let total = '';
+    let total = 0;
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -58,7 +58,7 @@ function cargarCarrito() {
 
     }
 
-    if (carrito !== 0) {
+    if (carrito != 0) {
         let h2 = document.createElement('h2');
         h2.textContent = "$" + total.toLocaleString();
         totalCompra.appendChild(h2);
