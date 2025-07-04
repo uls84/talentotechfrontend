@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Agregar producto al carrito
-var botonesAgregar =
+let botonesAgregar =
     document.getElementsByClassName('agregar-carrito');
-for (var i = 0; i < botonesAgregar.length; i++) {
+for (let i = 0; i < botonesAgregar.length; i++) {
     botonesAgregar[i].addEventListener('click', agregarProducto);
 }
 
@@ -20,14 +20,14 @@ document.getElementById('vaciar-carrito').addEventListener('click',
 
 
 function agregarProducto(event) {
-    var producto = {
+    let producto = {
         id: event.target.getAttribute('data-id'),
         nombre: event.target.getAttribute('data-nombre'),
         precio: event.target.getAttribute('data-precio')
     };
 
 
-    var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito.push(producto);
     localStorage.setItem('carrito', JSON.stringify(carrito));
     cargarCarrito();
@@ -35,19 +35,33 @@ function agregarProducto(event) {
 
 
 function cargarCarrito() {
-    var listaCarrito = document.getElementById('lista-carrito');
+    let listaCarrito = document.getElementById('lista-carrito');
     listaCarrito.innerHTML = '';
 
+    let totalCompra = document.getElementById('totalCompra');
+    totalCompra.innerHTML = '';
 
-    var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let total = '';
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 
-    for (var i = 0; i < carrito.length; i++) {
-        var producto = carrito[i];
+    for (let i = 0; i < carrito.length; i++) {
+        let producto = carrito[i];
 
 
-        var li = document.createElement('li');
+        let li = document.createElement('li');
         li.textContent = producto.nombre + ' - $' + producto.precio;
         listaCarrito.appendChild(li);
+
+        total +=parseInt(producto.precio);
+
+    }
+
+    if (carrito !== 0) {
+        let h2 = document.createElement('h2');
+        h2.textContent = "$" + total.toLocaleString();
+        totalCompra.appendChild(h2);
     }
 }
+

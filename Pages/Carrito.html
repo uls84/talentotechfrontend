@@ -61,7 +61,14 @@
                 <button id="vaciar-carrito">Vaciar Carrito</button>
             </div>
         </div>
+
         <div class="container_carrito">
+            <div>
+                <h2>Resumen de la compra</h2>
+                <section>
+                    <div id="totalCompra"></div>
+                </section>
+            </div>
 
             <form class="contact-form" action="https://formspree.io/f/xanovjeg" method="POST">
                 <div class="form-group">
@@ -73,20 +80,14 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <textarea name="Consulta:" rows="5" cols="30" placeholder="Escriba aqui su consulta:"></textarea>
+                    <input name="Telefono:" name="Telefono" id="telefono" placeholder="Ingrese su teléfono:"></input>
                 </div>
                 <br>
                 <div class="form-group">
-
-                    <input type="submit" name="Submit" id="submit" placeholder="Enviar:">
-
-                    <input type="reset" name="Reset" id="reset" placeholder="Restablecer:">
-
+                    <button -type="submit" id="botonEnviar">Confirmar Compra</button>
                 </div>
 
             </form>
-        </div>
-
 
     </main>
 
