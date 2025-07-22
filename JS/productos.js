@@ -1,48 +1,31 @@
-/*    fetch('./productos.JSON')
-      .then(response => {
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        // Handle the fetched JSON data
-        console.log(data);
-        // You can now use 'data' to update your HTML or perform other operations
-      })
-      .catch(error => {
-        console.error('Error fetching the JSON file:', error);
-      });
-      */
-const products = document.getElementsByClassName('productos');
-const divCard = document.createElement('div');
-
+let productContainer = document.getElementById('product-container');
+console.log(productContainer);
 
 
 fetch('../JS/productos.JSON')
-    .then(res => {
-        if (!res.ok) {
-            console.log("Problem");
-            return;
-        }
-        return res.json();
-    })
-    .then(data => {
-        data.forEach(post => {
-            divCard.insertAdjacentHTML('beforeend',
-                `
-                <div class="product-card">
-                <img alt="D7500"> ${post.image}</img>
+  .then(res => {
+    if (!res.ok) {
+      console.log('No hay dato');
+    } return res.json()
+  })
+  .then(data => {
+    data.forEach(post => {
+      let divCard = document.createElement('div');
+      divCard.classList.add('product-card');
+      console.log(divCard);
+      divCard.innerHTML = (`
+                <img alt="D7500" src=${post.image}></img>
                 <h2>${post.name}</h2>
                 <p>${post.description}</p>
-                <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+                <h3>$ ${post.price}</h3>
+                <button class="agregar-carrito" data-id=${post.id} data-nombre=${post.name} data-precio=${post.price}>Agregar al carrito</button>
                 `
-            ),
-            products.append(divCard);
-        })})
-            .catch(error => {
-                console.error('Error fetching the JSON file:', error);
-                console.log(error);
-            });   
+      )
+        productContainer.appendChild(divCard);
+    })
+  })
+  .catch(error => {
+    console.error('Error fetching the JSON file:', error);
+    console.log(error);
+  });   
