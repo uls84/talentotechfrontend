@@ -24,7 +24,7 @@
         "id": "4",
         "name": "Pentax K-1 Mark II",
         "price": 2150000,
-        "image": "./Images/productos/K1mark2.png",
+        "image": "../Images/productos/K1mark2.png",
         "description": "Desarrollada como sucesora de la cámara réflex digital PENTAX K-1 de 35 mm (lanzada en abril de 2016), la PENTAX K-1 Mark II fue diseñada para ser el nuevo buque insignia de la aclamada línea de productos PENTAX K. Además de la excepcional calidad de imagen, este modelo ofrece un excelente rendimiento de imagen de super alta sensibilidad y una operabilidad mucho mejorada, factores importantes que se esperan en un modelo de gama alta, para acomodar una mayor variedad de sujetos y escenas."
     },
     {
@@ -38,21 +38,21 @@
         "id": "6",
         "name": "Panasonic Lumix Leica F 1.7",
         "price": 680000,
-        "image": "../Images/productos/lumix leica.png",
+        "image": "../Images/productos/lumix_leica.png",
         "description": "El LEICA DG SUMMILUX 25mm / F1.4 II ASPH. fue desarrollado como un objetivo de referencia de gran apertura estándar para la serie LUMIX G. Es posible lograr un efecto gran angular, un efecto de telefoto medio o un efecto de telefoto ajustando la combinación del ángulo de disparo, la distancia al sujeto y el efecto de apertura. Sirve como un objetivo estándar todoterreno para disparos ordinarios y también como un objetivo básico para disfrutar de experiencias fotográficas profundas durante muchos años."
     },
     {
         "id": "7",
         "name": "Kit Profesional Matterport Cámara 3d Pro2",
         "price": 280000,
-        "image": "../Images/productos/Kit profesional.png",
+        "image": "../Images/productos/Kit_profesional.png",
         "description": "Kit profesional – Incluye una cámara 3D Pro2, trípode de aluminio de 3 secciones, abrazadera de liberación rápida y funda rígida portátil Captura 3D de alta calidad, 99 de precisión dentro del alcance. Resolución fotográfica profesional 134.2 megapíxeles. Fotografía ilimitada de calidad de impresión 4K.Captura 3D rápida e intuitiva con solo pulsar un botón. 20 segundos de tiempo de captura por escaneo/ barrido. Batería de iones de litio de alta capacidad para capturar múltiples espacios en un día. Puede escanear durante 8 horas con una sola carga."
     },
     {
         "id": "8",
         "name": "Tripode Profesional Gitzo Gk3532-82qd",
         "price": 60000,
-        "image": "../Images/productos/Gitzo Gk3532-82qd.png",
+        "image": "../Images/productos/Gitzo_Gk3532-82qd.png",
         "description": "El Gitzo GT3532 es un trípode de altura estándar, de 3 secciones, de la Serie 3, hecho de fibra de carbono que sostiene de manera segura cámaras profesionales con lentes de 300 mm (hasta 400 mm) y es altamente portátil. El trípode cuenta con tubos de Carbon eXact con diámetros de pierna más grandes. Su diámetro de la sección superior de la pierna de 32.9 mm y las secciones inferiores de pierna de fibra de carbono de alto módulo hacen que este trípode sea más rígido y fuerte que sus predecesores. Este trípode es la elección perfecta para fotógrafos profesionales que buscan un soporte altamente resistente y confiable que sea lo suficientemente ligero para llevar durante horas mientras exploran el gran aire libre."
     },
     {
@@ -66,14 +66,14 @@
         "id": "10",
         "name": "Kit De Limpieza Cámara Lente Fotografía Reflex",
         "price": 35000,
-        "image": "../Images/productos/Kit limpieza.png",
+        "image": "../Images/productos/Kit_limpieza.png",
         "description": "Kit de Limpieza de Cámara 5 en 1 Descubre el Kit de Limpieza de Cámara 5 en 1, la herramienta profesional que transformará el cuidado de tus lentes y sensores. Diseñado especialmente para fotógrafos y entusiastas de la imagen, este kit garantiza una limpieza profunda y efectiva. Características Destacadas Limpieza Profesional: Este kit está compuesto por herramientas de alta calidad que eliminan polvo, partículas y manchas sin dejar arañazos ni rayas. Ideal para lentes de DSLR y otros dispositivos ópticos."
     },
     {
         "id": "11",
         "name": "Luz Led Para Fotografía Y Vídeo",
         "price": 55000,
-        "image": "../Images/productos/luz led.png",
+        "image": "../Images/productos/luz_led.png",
         "description": "Temperatura de color diurna de 5600 K, haz de luz equivalente a 40 W, tiempo de funcionamiento de dos horas con 3 pilas AAA, difusor incorporado a la cámara, soporte de montaje lateral incluido. El kit incluye: funda para flash, kit de limpieza de 3 piezas, temperatura de color diurna de 5600 K, haz de luz equivalente a 40 W, difusor incorporado, soporte de zapato integrado en la cámara, soporte de montaje lateral incluido."
     },
     {
