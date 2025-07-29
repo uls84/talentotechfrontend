@@ -84,53 +84,44 @@
 		</head>
 
 		<body>
-
-			<div class="slider" id="slider">
+			<!--
+	<div class="slideshow-container">
+		<div class="slides">
+			<div class="slide" onclick="window.location.href='./Pages/Productos.html'";>
+				<img src="./Images/slideshow/lake.jpeg" alt="Lago">
+			</div>
+			<div class="slide" onclick="window.location.href='./Pages/Productos.htmll'";>
+				<img src="./Images/slideshow/Sony_a7_IV.jpg" alt="Sony A7">
+			</div>
+			<div class="slide" onclick="window.location.href='./Pages/Productos.html'";>
+				<img src="./Images/slideshow/conceptos-basicos-iluminacion.jpg" alt="Iluminacion">
+			</div>
+		</div>
+		<button id="prevBtn" class="nav-button">Anterior</button>
+		<button id="nextBtn" class="nav-button">Siguiente</button>
+	</div>
+			-->
+			<div class="slideshow-container">
 				<div class="slides">
-					<div class="slide">
-						<img src="./Images/productos/a6100.png" alt="Sony a6100">
-						<div class="caption">Conozca más</div>
+					<div class="slide" onclick="window.location.href='./Pages/Productos.html'">
+						<img src="./Images/slideshow/conceptos-basicos-iluminacion.jpg" alt="Iluminacion">
 					</div>
-					<div class="slide">
-						<img src="./Images/productos/Besnfoto.png" alt="Besnfoto">
-						<div class="caption">Conozca más</div>
+					<div class="slide" onclick="window.location.href='./Pages/Productos.html'">
+						<img src="./Images/slideshow/lake.jpeg" alt="Lago">
 					</div>
-					<div class="slide">
-						<img src="producto3.jpg" alt="Producto 3">
-						<div class="caption">Conozca más</div>
+					<div class="slide" onclick="window.location.href='./Pages/Productos.html'">
+						<img src="./Images/slideshow/Sony_a7_IV.jpg" alt="Sony A7">
 					</div>
 				</div>
+				<button id="prevBtn" class="nav-button"><i class="fa-solid fa-caret-left"></i></button>
+				<button id="nextBtn" class="nav-button"><i class="fa-solid fa-caret-right"></i></button>
 			</div>
 
 
-
 	</div>
+	<script src="./JS/slider.js"></script>
 	<script src="./JS/productos.js"></script>
 	<script src="./JS/carrito.js"></script>
-	<script>
-		const slider = document.getElementById('slider');
-		const slides = document.querySelector('.slides');
-		const slideCount = document.querySelectorAll('.slide').length;
-
-		let currentIndex = 0;
-
-		function showSlide(index) {
-			const offset = -index * 100;
-			slides.style.transform = translateX(<span class="hljs-subst">${offset}</span> %);
-		}
-
-		function nextSlide() {
-			currentIndex = (currentIndex + 1) % slideCount;
-			showSlide(currentIndex);
-		}
-
-		setInterval(nextSlide, 3000); // Cambia cada 3 segundos
-
-		// Enlace al hacer clic
-		slider.addEventListener('click', function () {
-			window.location.href = "./Pages/Productos.html"; // Cambia a tu página de productos
-		});
-	</script>
 
 </body>
 
