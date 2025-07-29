@@ -60,10 +60,9 @@
                             <div class="container-cart-products hidden" id="container-cart-products">
                             </div>
                             <div class="cart-total hidden" id="cart-total">
-                                <h3>Total:</h3>
                                 <span class="total-pagar" id="total-pagar"></span>
                                 <button id="vaciar-carrito">Vaciar Carrito</button>
-                                <button id="realizar-compra"><a href="./Checkout.html">Realizar compra</a></button>
+                                <button id="realizar-compra"><a href="./checkout2.html">Realizar compra</a></button>
                             </div>
                             <p class="cart-empty" id="cart-empty">El carrito está vacío</p>
                         </div>
@@ -81,9 +80,9 @@
             <h1>Checkout</h1>
 
             <div class="cart-summary-checkout" id="cart-summary-checkout">
-                <h2>Resumen de tu carrito</h2>
-                <div id="cart-items-checkout"></div>
-                <div class="total-checkout" id="total-pagar-checkout"></div>
+                <h2 id="h2-checkout">Resumen de tu carrito</h2>
+                <div id="cart-items" class="cart-items-checkout"></div>
+                <h3 class="total-checkout" id="total-checkout"></h3>
             </div>
 
             <div class="checkout-form">
@@ -98,8 +97,8 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="Telefono:" name="Telefono" id="telefono"
-                            placeholder="Ingrese su teléfono:" required></input>
+                        <input name="Telefono:" name="Telefono" id="telefono" placeholder="Ingrese su teléfono:"
+                            required></input>
                     </div>
                     <br>
                     <div class="form-group">
@@ -126,6 +125,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
             crossorigin="anonymous"></script>
+            <script src="../JS/productos.js"></script>
         <script src="../JS/carrito2.js"></script>
     </body>
 

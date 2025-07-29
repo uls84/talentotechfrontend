@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cargarCarrito();
     });
 
-    // Agregar unidad (esto puede usarse si tienes un botón para agregar un producto específico)
-    document.getElementById('agregar-unidad').addEventListener('click', function () {
-        console.log('algo');
-    });
 });
 
 function cargarCarrito() {
@@ -62,9 +58,20 @@ function cargarCarrito() {
             cargarCarrito();
         });
 
+        // Crear botón para borrar elemento
+        let btnBorrar = document.createElement('button');
+        btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        btnBorrar.classList.add('btn-borrar');
+        btnBorrar.addEventListener('click', function () {
+            carrito.splice(i, 1); // Eliminar el producto del carrito si la cantidad es 1
+            guardarCarrito(carrito);
+            cargarCarrito();
+        });
+
         // Agregar los botones a la lista
         li.appendChild(btnAgregar);
         li.appendChild(btnQuitar);
+        li.appendChild(btnBorrar);
 
         listaCarrito.appendChild(li);
 
@@ -104,6 +111,7 @@ function guardarCarrito(carrito) {
 function cargarCarritoCheckout() {
     let cartItemsContainer = document.getElementById('cart-items');
     let totalPagar = document.getElementById('total-pagar');
+    let pagarCheckout = document.getElementById('total-checkout');
     cartItemsContainer.innerHTML = '';
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -118,7 +126,11 @@ function cargarCarritoCheckout() {
     }
 
     totalPagar.textContent = `Total: $${total.toFixed(2)}`;
+    pagarCheckout.textContent = `Total: $${total.toFixed(0)}`;
 }
 
+function realizarCompra(){
+    document.addEventListener('click')
+}
 // Llamar a la función para cargar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarritoCheckout);

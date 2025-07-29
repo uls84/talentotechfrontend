@@ -19,7 +19,7 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="../Images/Logochiquitoamarillo.png">
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles2.css">
     <title>AF - Contacto</title>
 
 </head>
@@ -60,13 +60,14 @@
                 <p>Si tienes alguna pregunta o deseas obtener más información, no dudes en ponerte en contacto con
                     nosotros. Estamos aquí para ayudarte.</p>
 
+
                 <form class="contact-form" action="https://formspree.io/f/xanovjeg" method="POST">
                     <div class="form-group">
-                        <input type="texto" name="Nombre" id="nombre" placeholder="Ingrese su nombre:">
+                        <input type="texto" name="Nombre" id="nombre" placeholder="Ingrese su nombre:" required>
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="email" name="Email" id="email" placeholder="Ingrese su email:">
+                        <input type="email" name="Email" id="email" placeholder="Ingrese su email:" required>
                     </div>
                     <br>
                     <div class="form-group">
@@ -74,16 +75,14 @@
                             placeholder="Escriba aqui su consulta:"></textarea>
                     </div>
                     <br>
-                    <div class="form-group">
-        
-                            <input type="submit" name="Submit" id="submit" placeholder="Enviar:">
-                        
-                            <input type="reset" name="Reset" id="reset" placeholder="Restablecer:">
-                        
+                    <div class="form-group-btn">
+
+                        <input type="submit" name="Submit" id="submit" placeholder="Enviar:">
+
+                        <input type="reset" name="Reset" id="reset" placeholder="Restablecer:">
+
                     </div>
 
-                </form>
-            </div>
         </section>
 
 
