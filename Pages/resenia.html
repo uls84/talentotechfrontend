@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="../Images/Logochiquitoamarillo.png">
     <link rel="stylesheet" href="../CSS/styles.css">
-    <title>AF - Carrito</title>
+    <title>AF - Reseñas</title>
 
 </head>
 
@@ -31,6 +31,7 @@
                 <img src="../Images/Logoamarillo.png" width="10%" alt="Logo del local">
             </a>
         </div>
+
         <div class="titulo">
             <h1>AF - Almacen Fotográfico</h1>
             <h4>Productos e insumos de fotografía. </h4>
@@ -41,10 +42,33 @@
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./Productos.html">Productos</a></li>
-                    <li><a href="./Reseñas.html">Reseñas</a></li>
+                    <li><a href="./Reviews.html">Reseñas</a></li>
                     <li><a href="./Nosotros.html">Nosotros</a></li>
                     <li><a href="./Contacto.html">Contacto</a></li>
-                    <li><a href="./Carrito.html"><i class="fa-solid fa-cart-shopping"></a></i></i></li>
+                    <li>
+                        <div class="container-icon" id="container-icon">
+                            <div class="container-cart-icon">
+                                <div class="cart-icon">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                                <div class="count-products hidden">
+                                    <span id="contador-productos"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="container-cart" class="hidden">
+                            <div class="container-cart-products hidden" id="container-cart-products">
+                            </div>
+                            <div class="cart-total hidden" id="cart-total">
+                                <h3>Total:</h3>
+                                <span class="total-pagar" id="total-pagar"></span>
+                                <button id="vaciar-carrito">Vaciar Carrito</button>
+                                <button id="realizar-compra"><a href="./Checkout.html">Realizar compra</a></button>
+                            </div>
+                            <p class="cart-empty" id="cart-empty">El carrito está vacío</p>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <nav>
@@ -52,42 +76,17 @@
 
     </header>
 
-    <main class="main">
-
-        <div class="container_carrito">
-            <div id="carrito">
-                <h2>Carrito de Compras</h2>
-                <ul id="lista-carrito"></ul>
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-            </div>
+    <main class="reviews">
+        <div class="review">
+            <h1>Clientes satisfechos</h1>
+            <div class="container my-4 text-center"></div>
+            <div class="mt-2" id="contenido"></div>
+            <button class="btn-danger" onclick="traer()">Siguiente</button>
         </div>
-
-        <div class="container_carrito">
-            <div>
-                <h2>Resumen de la compra</h2>
-                <section>
-                    <div id="totalCompra"></div>
-                </section>
-            </div>
-
-            <form class="contact-form" action="https://formspree.io/f/xanovjeg" method="POST">
-                <div class="form-group">
-                    <input type="texto" name="Nombre" id="nombre" placeholder="Ingrese su nombre:">
-                </div>
-                <br>
-                <div class="form-group">
-                    <input type="email" name="Email" id="email" placeholder="Ingrese su email:">
-                </div>
-                <br>
-                <div class="form-group">
-                    <input name="Telefono:" name="Telefono" id="telefono" placeholder="Ingrese su teléfono:"></input>
-                </div>
-                <br>
-                <div class="form-group">
-                    <button -type="submit" id="botonEnviar">Confirmar Compra</button>
-                </div>
-
-            </form>
+        <!--
+    <h1> Reviews Disponibles</h1>
+    <div id="reviewstore-container"></div>
+-->
 
     </main>
 
@@ -107,6 +106,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script src="../JS/api.js"></script>
+    <script src="../JS/productos.js"></script>
     <script src="../JS/carrito.js"></script>
 </body>
 

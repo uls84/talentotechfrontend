@@ -1,0 +1,157 @@
+
+let productContainer = document.getElementById('product-container');
+
+
+productos = [
+    {
+        "id": "1",
+        "name": "Nikon D7500",
+        "price": 1000000,
+        "image": "../Images/productos/D7500.png",
+        "description": "La D7500 ofrece las mismas características de resolución, rango de sensibilidad ISO, procesamiento y eficiencia energética que la galardonada D500, pero en una DSLR para aficionados. En pocas palabras, la D7500 se diseñó para superar a cualquier cámara de su clase gracias a su excelente calidad de imagen, su velocidad increíble, su enfoque automático preciso, los videos en 4K Ultra HD y las herramientas creativas de nivel profesional."
+    },
+    {
+        "id": "2",
+        "name": "Canon EOS 90",
+        "price": 2300000,
+        "image": "../Images/productos/Eos90d.png",
+        "description": "La EOS 90D es el último modelo de una extensa gama de cámaras réflex de Canon, en la que cada una añade una mejora y un avance respecto a la anterior. Desde el momento que la tomas en la mano, su tranquilizador diseño, además de personalizable, resulta intuitivo. Los controles de la cámara están situados de forma óptima al alcance de los dedos y los pulgares, y además está bien equilibrada con teleobjetivos gran angular cortos y largos de la amplia gama de ópticas de Canon."
+    },
+    {
+        "id": "3",
+        "name": "Sony A6100",
+        "price": 1300000,
+        "image": "../Images/productos/a6100.png",
+        "description": "Gracias a su velocidad AD y rendimiento extraordinarios, y al seguimiento del sujeto persistente, la a6100 maneja con habilidad la mecánica de la fotografía para que puedas concentrarte en aspectos más creativos. Captura momentos fugaces de acción y ofrece imágenes hermosas incluso en entornos difíciles, para obtener fotos asombrosas y películas 4K de alta resolución."
+    },
+    {
+        "id": "4",
+        "name": "Pentax K-1 Mark II",
+        "price": 2150000,
+        "image": "../Images/productos/K1mark2.png",
+        "description": "Desarrollada como sucesora de la cámara réflex digital PENTAX K-1 de 35 mm (lanzada en abril de 2016), la PENTAX K-1 Mark II fue diseñada para ser el nuevo buque insignia de la aclamada línea de productos PENTAX K. Además de la excepcional calidad de imagen, este modelo ofrece un excelente rendimiento de imagen de super alta sensibilidad y una operabilidad mucho mejorada, factores importantes que se esperan en un modelo de gama alta, para acomodar una mayor variedad de sujetos y escenas."
+    },
+    {
+        "id": "5",
+        "name": "Fujifilm Gfx100II",
+        "price": 1770000,
+        "image": "../Images/productos/Gfx100ii.png",
+        "description": "FUJIFILM continúa desafiando las expectativas de las cámaras sin espejo de formato medio con la GFX100 II. Al incorporar un potente nuevo sensor de 102MP y el procesador de imagen X-Processor 5, esta cámara no solo sirve como una poderosa segunda iteración del modelo insignia de FUJIFILM, sino que también demuestra ser una opción sin espejo de élite y accesible para fotógrafos y cineastas por igual."
+    },
+    {
+        "id": "6",
+        "name": "Panasonic Lumix Leica F 1.7",
+        "price": 680000,
+        "image": "../Images/productos/lumix_leica.png",
+        "description": "El LEICA DG SUMMILUX 25mm / F1.4 II ASPH. fue desarrollado como un objetivo de referencia de gran apertura estándar para la serie LUMIX G. Es posible lograr un efecto gran angular, un efecto de telefoto medio o un efecto de telefoto ajustando la combinación del ángulo de disparo, la distancia al sujeto y el efecto de apertura. Sirve como un objetivo estándar todoterreno para disparos ordinarios y también como un objetivo básico para disfrutar de experiencias fotográficas profundas durante muchos años."
+    },
+    {
+        "id": "7",
+        "name": "Kit Profesional Matterport Cámara 3d Pro2",
+        "price": 280000,
+        "image": "../Images/productos/Kit_profesional.png",
+        "description": "Kit profesional – Incluye una cámara 3D Pro2, trípode de aluminio de 3 secciones, abrazadera de liberación rápida y funda rígida portátil Captura 3D de alta calidad, 99 de precisión dentro del alcance. Resolución fotográfica profesional 134.2 megapíxeles. Fotografía ilimitada de calidad de impresión 4K.Captura 3D rápida e intuitiva con solo pulsar un botón. 20 segundos de tiempo de captura por escaneo/ barrido. Batería de iones de litio de alta capacidad para capturar múltiples espacios en un día. Puede escanear durante 8 horas con una sola carga."
+    },
+    {
+        "id": "8",
+        "name": "Tripode Profesional Gitzo Gk3532-82qd",
+        "price": 60000,
+        "image": "../Images/productos/Gitzo_Gk3532-82qd.png",
+        "description": "El Gitzo GT3532 es un trípode de altura estándar, de 3 secciones, de la Serie 3, hecho de fibra de carbono que sostiene de manera segura cámaras profesionales con lentes de 300 mm (hasta 400 mm) y es altamente portátil. El trípode cuenta con tubos de Carbon eXact con diámetros de pierna más grandes. Su diámetro de la sección superior de la pierna de 32.9 mm y las secciones inferiores de pierna de fibra de carbono de alto módulo hacen que este trípode sea más rígido y fuerte que sus predecesores. Este trípode es la elección perfecta para fotógrafos profesionales que buscan un soporte altamente resistente y confiable que sea lo suficientemente ligero para llevar durante horas mientras exploran el gran aire libre."
+    },
+    {
+        "id": "9",
+        "name": "Besnfoto Mochila Para Cámara Impermeable Para Fotógrafo",
+        "price": 75000,
+        "image": "../Images/productos/Besnfoto.png",
+        "description": "Gran capacidad: mochila para cámara profesional de 25 litros para cámaras DSLR SLR sin espejo, drones DJI y estabilizador de cámara. Dimensión: 18,9 x 7,09 x 12,6 pulgadas. 3 compartimentos incluidos. Puede adaptarse a macbook y estabilizador de 16 pulgadas, etc. Espalda y correas de descompresión: correa extraíble que tiene tres engranajes para ajustar la correa a sus pies y una correa de cintura acolchada para reducir el peso de su hombro y espalda."
+    },
+    {
+        "id": "10",
+        "name": "Kit De Limpieza Cámara Lente Fotografía Reflex",
+        "price": 35000,
+        "image": "../Images/productos/Kit_limpieza.png",
+        "description": "Kit de Limpieza de Cámara 5 en 1 Descubre el Kit de Limpieza de Cámara 5 en 1, la herramienta profesional que transformará el cuidado de tus lentes y sensores. Diseñado especialmente para fotógrafos y entusiastas de la imagen, este kit garantiza una limpieza profunda y efectiva. Características Destacadas Limpieza Profesional: Este kit está compuesto por herramientas de alta calidad que eliminan polvo, partículas y manchas sin dejar arañazos ni rayas. Ideal para lentes de DSLR y otros dispositivos ópticos."
+    },
+    {
+        "id": "11",
+        "name": "Luz Led Para Fotografía Y Vídeo",
+        "price": 55000,
+        "image": "../Images/productos/luz_led.png",
+        "description": "Temperatura de color diurna de 5600 K, haz de luz equivalente a 40 W, tiempo de funcionamiento de dos horas con 3 pilas AAA, difusor incorporado a la cámara, soporte de montaje lateral incluido. El kit incluye: funda para flash, kit de limpieza de 3 piezas, temperatura de color diurna de 5600 K, haz de luz equivalente a 40 W, difusor incorporado, soporte de zapato integrado en la cámara, soporte de montaje lateral incluido."
+    },
+    {
+        "id": "12",
+        "name": "Adaptador De Montura De Objetivo Lente Leica R Sl",
+        "price": 89000,
+        "image": "../Images/productos/adaptador.png",
+        "description": "Las cámaras sin espejo no solo son revolucionarias por su tamaño compacto, ¡sino que son incluso más versátiles para montar lentes que sus contrapartes de tamaño completo! Fotodiox ofrece una sólida compatibilidad con las plataformas de cámaras sin espejo, con cientos de opciones para montar objetivos tanto modernos como antiguos. Nuestros adaptadores ofrecen un enfoque infinito, un control de apertura manual y una construcción robusta para una calidad duradera."
+    }
+]
+
+
+// fetch('../JS/productos.JSON')
+//   .then(res => {
+//     if (!res.ok) {
+//       console.log('No hay dato');
+//     } return res.json()
+//   })
+//   .then(data => {
+//     data.forEach(post => {
+//       let divCard = document.createElement('div');
+//       divCard.classList.add('product-card');
+//       console.log(divCard);
+//       divCard.innerHTML = (`
+//                 <img alt="D7500" src=${post.image}></img>
+//                 <h2>${post.name}</h2>
+//                 <p>${post.description}</p>
+//                 <h3>$ ${post.price}</h3>
+//                 <button class="agregar-carrito" data-id=${post.id} data-nombre=${post.name} data-precio=${post.price}>Agregar al carrito</button>
+//                 `
+//       )
+//         productContainer.appendChild(divCard);
+//     })
+//   })
+//   .catch(error => {
+//     console.error('Error fetching the JSON file:', error);
+//     console.log(error);
+//   });   
+
+function agregarProducto(event) {   
+    let producto = {
+      id: event.target.getAttribute('data-id'),
+      nombre: event.target.getAttribute('data-nombre'),
+      precio: parseFloat(event.target.getAttribute('data-precio')),
+      cantidad: 1
+    };
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Buscar si ya existe
+    let existente = carrito.find(p => p.id === producto.id);
+
+    if (existente) {
+      existente.cantidad += 1;
+    } else {
+      carrito.push(producto);
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    cargarCarrito();
+}
+
+productos.forEach(post => {
+      let divCard = document.createElement('div');
+      divCard.classList.add('product-card');
+      console.log(divCard);
+      divCard.addEventListener('click', agregarProducto)
+      divCard.innerHTML = (`
+                <img alt="D7500" src=${post.image}></img>
+                <h2>${post.name}</h2>
+                <h3>$ ${post.price}</h3>
+                <p>${post.description}</p>
+                <button class="agregar-carrito" data-id=${post.id} data-nombre=${post.name} data-precio=${post.price}>Agregar al carrito</button>
+                `
+      )
+        productContainer.appendChild(divCard);
+    }) 
