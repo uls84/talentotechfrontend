@@ -120,9 +120,7 @@ function guardarCarrito(carrito) {
 
 function cargarCarritoCheckout() {
     let cartItemsContainer = document.getElementById('cart-items');
-    let contactForm = document.getElementById('contact-form');
-
-
+    //let totalPagar = document.getElementById('total-pagar');
     let pagarCheckout = document.getElementById('total-checkout');
     cartItemsContainer.innerHTML = '';
 
@@ -134,11 +132,6 @@ function cargarCarritoCheckout() {
         div.className = 'cart-item';
         div.textContent = `${producto.cantidad} x ${producto.nombre} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
         cartItemsContainer.appendChild(div);
-        let inputHidden = document.createElement('input');
-        inputHidden.type = 'hidden';
-        inputHidden.name = 'producto[]';  // se envían como array
-        inputHidden.value = `${producto.cantidad} x ${producto.nombre} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
-        contactForm.appendChild(inputHidden);
         total += producto.precio * producto.cantidad;
     }
 
@@ -152,5 +145,5 @@ function realizarCompra() {
 // Llamar a la función para cargar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarritoCheckout);
 
-
+// CHECKOUT mandar datos por mail
 
