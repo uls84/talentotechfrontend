@@ -81,12 +81,7 @@
             <h1>Clientes satisfechos</h1>
             <div class="container my-4 text-center"></div>
             <div class="mt-2" id="contenido"></div>
-            <button class="btn-danger" onclick="traer()">Siguiente</button>
         </div>
-        <!--
-    <h1> Reviews Disponibles</h1>
-    <div id="reviewstore-container"></div>
--->
 
     </main>
 
@@ -109,6 +104,13 @@
     <script src="../JS/api.js"></script>
     <script src="../JS/productos.js"></script>
     <script src="../JS/carrito.js"></script>
+    <script>window.onload = function () {
+            // Ejecutar la función apenas carga la página
+            traer();
+
+            // Repetir cada 5 segundos (5000 ms)
+            setInterval(traer, 5000);
+        };</script>
 </body>
 
 </html>

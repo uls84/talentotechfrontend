@@ -89,40 +89,12 @@ productos = [
     }
 ]
 
-
-// fetch('../JS/productos.JSON')
-//   .then(res => {
-//     if (!res.ok) {
-//       console.log('No hay dato');
-//     } return res.json()
-//   })
-//   .then(data => {
-//     data.forEach(post => {
-//       let divCard = document.createElement('div');
-//       divCard.classList.add('product-card');
-//       console.log(divCard);
-//       divCard.innerHTML = (`
-//                 <img alt="D7500" src=${post.image}></img>
-//                 <h2>${post.name}</h2>
-//                 <p>${post.description}</p>
-//                 <h3>$ ${post.price}</h3>
-//                 <button class="agregar-carrito" data-id=${post.id} data-nombre=${post.name} data-precio=${post.price}>Agregar al carrito</button>
-//                 `
-//       )
-//         productContainer.appendChild(divCard);
-//     })
-//   })
-//   .catch(error => {
-//     console.error('Error fetching the JSON file:', error);
-//     console.log(error);
-//   });   
-
-function agregarProducto(event) {   
+function agregarProducto(event) {
     let producto = {
-      id: event.target.getAttribute('data-id'),
-      nombre: event.target.getAttribute('data-nombre'),
-      precio: parseFloat(event.target.getAttribute('data-precio')),
-      cantidad: 1
+        id: event.target.getAttribute('data-id'),
+        nombre: event.target.getAttribute('data-nombre'),
+        precio: parseFloat(event.target.getAttribute('data-precio')),
+        cantidad: 1
     };
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -131,9 +103,9 @@ function agregarProducto(event) {
     let existente = carrito.find(p => p.id === producto.id);
 
     if (existente) {
-      existente.cantidad += 1;
+        existente.cantidad += 1;
     } else {
-      carrito.push(producto);
+        carrito.push(producto);
     }
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -141,17 +113,21 @@ function agregarProducto(event) {
 }
 
 productos.forEach(post => {
-      let divCard = document.createElement('div');
-      divCard.classList.add('product-card');
-      console.log(divCard);
-      divCard.addEventListener('click', agregarProducto)
-      divCard.innerHTML = (`
+    let divCard = document.createElement('div');
+    divCard.classList.add('product-card');
+    console.log(divCard);
+    divCard.innerHTML = (`
                 <img alt="D7500" src=${post.image}></img>
                 <h2>${post.name}</h2>
                 <h3>$ ${post.price}</h3>
                 <p>${post.description}</p>
                 <button class="agregar-carrito" data-id=${post.id} data-nombre=${post.name} data-precio=${post.price}>Agregar al carrito</button>
                 `
-      )
-        productContainer.appendChild(divCard);
-    }) 
+    )
+    const button = divCard.querySelector('.agregar-carrito');
+    button.addEventListener('click', function (event) {
+        event.stopPropagation(); // Evita que dispare el click del div
+        agregarProducto(event);
+    });
+    productContainer.appendChild(divCard);
+}) 
