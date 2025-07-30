@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function vaciarCarrito() {
     localStorage.removeItem('carrito');
     cargarCarrito();
-    console.log("Hasta aca llegue wahim")
+    document.getElementById('contador-productos').classList.add('hidden');
 }
 
 function cargarCarrito() {
@@ -87,6 +87,13 @@ function cargarCarrito() {
 
         total += parseInt(producto.precio * producto.cantidad);
         cantidadProductos += producto.cantidad;
+
+    }
+
+    if (carrito.length > 0) {
+        document.getElementById('contador-productos').classList.remove('hidden');
+    } else {
+        document.getElementById('contador-productos').classList.add('hidden');
     }
 
     if (carrito.length != 0) {
@@ -99,7 +106,7 @@ function cargarCarrito() {
 
         document.getElementById('cart-empty').classList.add('hidden');
         document.getElementById('cart-total').classList.remove('hidden');
-        document.getElementById('container-cart').classList.remove('hidden');
+        document.getElementById('container-cart').classList.add('hidden');
         document.getElementById('container-cart-products').classList.remove('hidden');
         document.getElementById('contador-productos').classList.remove('hidden');
 
@@ -120,7 +127,9 @@ function guardarCarrito(carrito) {
 
 function cargarCarritoCheckout() {
     let cartItemsContainer = document.getElementById('cart-items');
-    //let totalPagar = document.getElementById('total-pagar');
+    if (cartItemsContainer == null) {
+        return;
+    }
     let pagarCheckout = document.getElementById('total-checkout');
     cartItemsContainer.innerHTML = '';
 

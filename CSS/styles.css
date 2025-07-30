@@ -304,13 +304,9 @@ body {
 .cart-empty {
   padding: 20px;
   text-align: center;
-  background-color: #383838;
+  background-color: #535353;
 }
 
-
-.hidden {
-  display: none;
-}
 
 .product-card:hover {
   transform: scale(1.05);
@@ -667,7 +663,7 @@ h3 {
   font-size: 18px;
 }
 
-
+/* CONTACTO */
 
 input::placeholder {
     color: white;       
@@ -681,4 +677,33 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
     -webkit-text-fill-color: white !important;
+}
+
+/* CONTADOR */
+
+#contador-productos h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#contador-productos {
+    font-size: 10px;
+}
+.count-products {
+    position: absolute;
+    top: -55%;
+    right: -15px;
+    background-color: #ee0909;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    border-radius: 71%;
+}
+
+.hidden {
+  display: none;
 }
