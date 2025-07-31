@@ -800,7 +800,7 @@ input:-webkit-autofill:focus {
     margin: 10px;
     justify-content: center;
     gap: 10px;
-    display: grid;
+    /*display: grid;*/
   }
 
   .container-cart-products li {
@@ -816,7 +816,7 @@ input:-webkit-autofill:focus {
     margin: 10px;
     justify-content: center;
     gap: 10px;
-    display: grid;
+    /*display: grid;*/
   }
 
   .container-cart-products li {
